@@ -3,6 +3,7 @@
   --color-text-muted: #c4c4c4;
   --color-text-blue: #222429; 
   --color-black: #191b1d;
+  --color-black-light: #191b1d79;
   --color-blue: #0957de;
   --color-green: #76bb90;
   --color-orange: #ff6601;
@@ -41,4 +42,11 @@
   --border-radius-sm: 5px;
   --border-radius-md: 7px;
   --border-radius-lg: 10px;
+
+  /* Z-index */
+  --z-index--1: -1;
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
 }
