@@ -1,0 +1,102 @@
+/* Import File font.css */
+@import url(./fonts.css);
+
+/* Import File variable.css */
+@import url(./variable.css);
+
+/* Import File reset.css */
+@import url(./reset.css);
+
+/* Container */
+#container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Global Class Form */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.form-control > label {
+  font-size: var(--font-size-md);
+}
+.form-control > input {
+  width: 320;
+  padding: 7px 13px;
+  border: var(--border-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-md);
+  border-radius: var(--border-radius-sm);
+  -webkit-border-radius: var(--border-radius-sm);
+  -moz-border-radius: var(--border-radius-sm);
+  -ms-border-radius: var(--border-radius-sm);
+  -o-border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+.form-control > input::placeholder {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-md);
+  color: var(--color-text-muted);
+}
+.form-control > input:focus {
+  border-color: var(--color-blue);
+}
+
+/* Global Class Button */
+.btn {
+  padding: 9px 14px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-lg);
+  border-radius: var(--border-radius-md);
+  -webkit-border-radius: var(--border-radius-md);
+  -moz-border-radius: var(--border-radius-md);
+  -ms-border-radius: var(--border-radius-md);
+  -o-border-radius: var(--border-radius-md);
+  color: var(--color-white);
+}
+.btn-primary {
+  background: var(--color-blue);
+}
+.btn-danger {
+  background: var(--color-pink);
+}
+.btn-success {
+  background: var(--color-green);
+}
+.btn-warning {
+  background: var(--color-yellow);
+}
+.btn-dark {
+  background: var(--color-black);
+}
+.btn-white {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: var(--border-sm);
+}
+.btn-group > .btn {
+  margin-right: 10px;
+}
+
+/* Icon */
+.icon, .icon-white{
+  width: 22px;
+  height: 22px;
+  box-sizing: content-box;
+  display: inline-block;
+  cursor: pointer;
+}
+.icon > svg > path{
+  stroke: var(--color-black);
+}
+.icon-white > svg >path{
+  stroke: var(--color-white);
+}
