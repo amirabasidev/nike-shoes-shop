@@ -54,3 +54,43 @@
   -ms-transform: scaleX(1);
   -o-transform: scaleX(1);
 }
+
+.navbar__open,.navbar__logo {
+  display: none!important;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: var(--color-white);
+    padding: 20px 10px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    z-index: var(--z-index-3);
+  }
+  .navbar__show {
+    left: 0;
+  }
+  .navbar__open,.navbar__logo {
+    display: block!important;
+  }
+  .navbar__logo{
+    width: 70%;
+    margin: 0 auto 10px auto;
+  }
+  .navbar__ul {
+    flex-direction: column;
+  }
+  .navbar__item {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
