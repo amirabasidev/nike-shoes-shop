@@ -1,7 +1,9 @@
+import Header from '../UI/header/Header'
+
 const Layout = () => {
   return (
     <>
-      {/* Header */}
+      <Header />
       <main>{/* Pages */}</main>
       {/* Footer */}
     </>
