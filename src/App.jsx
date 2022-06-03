@@ -1,5 +1,13 @@
+import { BrowserRouter } from "react-router-dom";
+
+import Layout from "./components/layout/Layout";
+
 const App = () => {
-  return <h1>App Ok</h1>;
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+  );
 };
 
 export default App;
