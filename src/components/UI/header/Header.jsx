@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import Navbar from './navbar/Navbar';
+import HeaderActions from './headerActions/HeaderActions';
 
 import classes from "./header.module.css";
 
@@ -11,6 +12,7 @@ const Header = () => {
         <img src="/src/assets/images/logo.png" alt="Logo" />
       </Link>
       <Navbar />
+      <HeaderActions />
     </header>
   );
 };
