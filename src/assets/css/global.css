@@ -51,7 +51,9 @@
 }
 
 /* Global Class Button */
-.btn {
+.btn,
+.btn-icon {
+  width: fit-content;
   padding: 9px 14px;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-lg);
@@ -61,6 +63,12 @@
   -ms-border-radius: var(--border-radius-md);
   -o-border-radius: var(--border-radius-md);
   color: var(--color-white);
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
 }
 .btn-primary {
   background: var(--color-blue);
