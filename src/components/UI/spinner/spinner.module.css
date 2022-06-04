@@ -1,0 +1,53 @@
+@-webkit-keyframes spinner {
+  0% {
+    height: 48px;
+  }
+  100% {
+    height: 4.8px;
+  }
+}
+@keyframes spinner {
+  0% {
+    height: 48px;
+  }
+  100% {
+    height: 4.8px;
+  }
+}
+
+.spinner__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  background: var(--color-black);
+  -webkit-animation: spinner 0.3s 0.3s linear infinite alternate;
+  animation: spinner 0.3s 0.3s linear infinite alternate;
+}
+.spinner::before,
+.spinner::after {
+  content: "";
+  width: 8px;
+  height: 40px;
+  border-radius: 4px;
+  background: var(--color-black);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  -webkit-animation: animloader61 0.3s 0.45s linear infinite alternate;
+  animation: animloader61 0.3s 0.45s linear infinite alternate;
+}
+.spinner::before {
+  left: -20px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
