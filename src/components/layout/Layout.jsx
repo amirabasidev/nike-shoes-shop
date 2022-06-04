@@ -1,10 +1,13 @@
-import Header from '../UI/header/Header'
+import Routes from "../../routes/Routes";
+import Header from "../UI/header/Header";
 
 const Layout = () => {
   return (
     <>
       <Header />
-      <main>{/* Pages */}</main>
+      <main>
+        <Routes />
+      </main>
       {/* Footer */}
     </>
   );
