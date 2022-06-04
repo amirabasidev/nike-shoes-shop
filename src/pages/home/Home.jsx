@@ -1,7 +1,9 @@
+import Banner from "../../components/UI/banner/Banner";
+
 const Home = () => {
   return (
     <section>
-      {/* Banner */}
+      <Banner />
     </section>
   );
 };
