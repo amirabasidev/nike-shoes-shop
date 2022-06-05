@@ -73,3 +73,29 @@
   letter-spacing: 0.1rem;
   color: var(--color-black);
 }
+
+@media only screen and (max-width: 992px) {
+  .banner{
+    gap: 4%;
+  }
+  .banner__img{
+    width: 52%;
+  }
+  .banner__content{
+    width: 44%;
+  }
+  .banner__content_desc{
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner{
+    margin-top: 50px;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .banner__img,.banner__content{
+    width: 100%;
+  }
+}
