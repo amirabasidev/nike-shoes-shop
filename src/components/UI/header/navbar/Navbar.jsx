@@ -6,6 +6,8 @@ import useToggle from "../../../../hooks/useToggle";
 
 import classes from "./navbar.module.css";
 
+import navbarLogo from '../../../../assets/images/logo__nav.jpg'
+
 const Navbar = () => {
   const [navbar__Ref, openNavbar, closeNavbar, ContainerToggle] = useToggle(
     classes.navbar__show,
@@ -19,7 +21,7 @@ const Navbar = () => {
       <ContainerToggle>
         <nav className={classes.navbar} ref={navbar__Ref}>
           <div className={classes.navbar__logo}>
-            <img src="/src/assets/images/logo__nav.jpg" alt="logo__navbar" />
+            <img src={navbarLogo} alt="logo__navbar" />
           </div>
           <ul className={classes.navbar__ul}>
             {navbarItems.map(({ key, title, url }) => {

@@ -5,11 +5,13 @@ import HeaderActions from './headerActions/HeaderActions';
 
 import classes from "./header.module.css";
 
+import Logo from '../../../assets/images/logo.png';
+
 const Header = () => {
   return (
     <header className={classes.header}>
       <Link className={classes.logo} to="/">
-        <img src="/src/assets/images/logo.png" alt="Logo" />
+        <img src={Logo} alt="Logo" />
       </Link>
       <Navbar />
       <HeaderActions />

@@ -3,12 +3,14 @@ import { ArrowRight } from "iconsax-react";
 
 import classes from "./banner.module.css";
 
+import shoesBanner from '../../../assets/images/shoes_banner.png'
+
 const Banner = () => {
   return (
     <>
       <section className={classes.banner}>
         <div className={classes.banner__img}>
-          <img src="/src/assets/images/shoes_banner.png" alt="Shoes Banner" />
+          <img src={shoesBanner} alt="Shoes Banner" />
         </div>
         <div className={classes.banner__content}>
           <h1 className={classes.banner__content_title}>
