@@ -85,3 +85,8 @@ img {
   width: 100%;
   height: 100%;
 }
+
+/* Class Reset */
+.swiper-button-disabled{
+  opacity: .5;
+}
