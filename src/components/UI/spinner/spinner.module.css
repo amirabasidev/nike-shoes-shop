@@ -43,8 +43,8 @@
   top: 50%;
   transform: translateY(-50%);
   left: 20px;
-  -webkit-animation: animloader61 0.3s 0.45s linear infinite alternate;
-  animation: animloader61 0.3s 0.45s linear infinite alternate;
+  -webkit-animation: spinner 0.3s 0.45s linear infinite alternate;
+  animation: spinner 0.3s 0.45s linear infinite alternate;
 }
 .spinner::before {
   left: -20px;
