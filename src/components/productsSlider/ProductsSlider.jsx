@@ -12,6 +12,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import classes from "./productsSlider.module.css";
 
+const breakpoints = {
+  1400: { slidesPerView: 6, spaceBetween: 20 },
+  1200: { slidesPerView: 5, spaceBetween: 20 },
+  992: { slidesPerView: 4, spaceBetween: 10 },
+  768: { slidesPerView: 3, spaceBetween: 10 },
+  576: { slidesPerView: 2, spaceBetween: 10 },
+  0: { slidesPerView: 1, spaceBetween: 10 },
+};
+
 const ProductsSlider = ({ title, url }) => {
   const {
     data: products,
@@ -31,8 +40,6 @@ const ProductsSlider = ({ title, url }) => {
         <>
           <Swiper
             speed={300}
-            slidesPerView={4}
-            spaceBetween={10}
             modules={[Navigation, Autoplay]}
             navigation={{
               nextEl: `.${classes.products__slider_next}`,
@@ -43,6 +50,7 @@ const ProductsSlider = ({ title, url }) => {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
+            breakpoints={breakpoints}
             className={classes.products__slider_swiper}
           >
             {products.map((product) => (
