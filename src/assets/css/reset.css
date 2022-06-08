@@ -19,6 +19,7 @@ body{
 }
 main{
   margin: 20px 0;
+  min-height: 88vh;
 }
 main > * {
   animation: opacity 1s;
