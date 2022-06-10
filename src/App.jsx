@@ -1,12 +1,17 @@
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+
+import store from './redux/store';
 
 import Layout from "./components/layout/Layout";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </Provider>
   );
 };
 
