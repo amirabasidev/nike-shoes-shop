@@ -16,6 +16,7 @@
 }
 body{
   background: var(--color-body);
+  overflow-x: hidden;
 }
 main{
   margin: 20px 0;
