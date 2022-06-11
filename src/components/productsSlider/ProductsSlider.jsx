@@ -8,8 +8,6 @@ import Error from "../error/Error";
 import Spinner from "../UI/spinner/Spinner";
 import ProductsItem from "./productsItem/ProductsItem";
 
-import "swiper/css";
-import "swiper/css/navigation";
 import classes from "./productsSlider.module.css";
 
 const breakpoints = {
