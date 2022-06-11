@@ -2,8 +2,10 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { AddSquare } from "iconsax-react";
 
-import classes from "./productDetails.module.css";
 import ProductSize from "./productSize/ProductSize";
+import ProductColors from "./productColors/ProductColors";
+
+import classes from "./productDetails.module.css";
 
 const ProductDetails = () => {
   const { name, categoryName, description, price } = useSelector(
@@ -24,6 +26,7 @@ const ProductDetails = () => {
       </h3>
       <p className={classes.product__details_desc}>{description}</p>
       <ProductSize />
+      <ProductColors />
       <h6 className="head__lg">
         price :{" "}
         <span className={classes.product__details_price}>{price} $</span>

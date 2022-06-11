@@ -1,0 +1,72 @@
+.product__colors {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.product__colors_items {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  top: 50%;
+  left: 70px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.product__color {
+  width: 30px;
+  height: 30px;
+}
+.product__color_input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+.product__color > span {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--box-shadow-sm);
+  border-radius: var(--border-radius-md);
+  -webkit-border-radius: var(--border-radius-md);
+  -moz-border-radius: var(--border-radius-md);
+  -ms-border-radius: var(--border-radius-md);
+  -o-border-radius: var(--border-radius-md);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.product__color_input:checked ~ span {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.product__color_input:checked ~ span::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  display: block;
+  width: 5px;
+  height: 11px;
+  border-right: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+  z-index: var(--z-index-3);
+}
