@@ -7,6 +7,7 @@ import { getProduct } from "../../redux/products/productActions";
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
 import ProductBreadcrumb from "../../components/product/productBreadcrumb/ProductBreadcrumb";
+import ProductImages from "../../components/product/productImages/ProductImages";
 
 import classes from "./product.module.css";
 
@@ -30,7 +31,9 @@ const Product = () => {
         product !== null && (
           <>
             <ProductBreadcrumb />
-            <section className={classes.product__content}>content</section>
+            <section className={classes.product__content}>
+              <ProductImages />
+            </section>
           </>
         )
       )}
