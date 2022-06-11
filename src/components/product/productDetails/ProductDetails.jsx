@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AddSquare } from "iconsax-react";
 
 import classes from "./productDetails.module.css";
+import ProductSize from "./productSize/ProductSize";
 
 const ProductDetails = () => {
   const { name, categoryName, description, price } = useSelector(
@@ -22,6 +23,7 @@ const ProductDetails = () => {
         </Link>
       </h3>
       <p className={classes.product__details_desc}>{description}</p>
+      <ProductSize />
       <h6 className="head__lg">
         price :{" "}
         <span className={classes.product__details_price}>{price} $</span>
