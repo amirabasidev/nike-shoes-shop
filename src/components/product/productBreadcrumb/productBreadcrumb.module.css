@@ -1,0 +1,34 @@
+.product__breadcrumb_container {
+  width: 100%;
+  overflow-x: auto;
+}
+.product__breadcrumb {
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.product__breadcrumb_link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-md);
+  color: var(--color-text-muted);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.product__breadcrumb_link:hover {
+  color: var(--color-black);
+}
+.product__breadcrumb_link > svg > path {
+  stroke: var(--color-black);
+}
+.product__breadcrumb_name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-lg);
+  color: var(--color-black);
+}

@@ -6,13 +6,14 @@ import { getProduct } from "../../redux/products/productActions";
 
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
+import ProductBreadcrumb from "../../components/product/productBreadcrumb/ProductBreadcrumb";
 
 import classes from "./product.module.css";
 
 const Product = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
-  
+
   const { product, loading, error } = useSelector((state) => state.product);
 
   useEffect(() => {
@@ -28,6 +29,7 @@ const Product = () => {
       ) : (
         product !== null && (
           <>
+            <ProductBreadcrumb />
             <section className={classes.product__content}>content</section>
           </>
         )
