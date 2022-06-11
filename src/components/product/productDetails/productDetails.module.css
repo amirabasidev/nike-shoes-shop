@@ -1,0 +1,31 @@
+.product__details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.product__details_name{
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-xxl);
+    color: var(--color-balck);
+}
+.product__details_category_link{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-lg);
+    color: var(--color-blue);
+}
+.product__details_desc{
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-md);
+    line-height: 27px;
+}
+.product__details_price{
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-xl);
+    color: var(--color-blue);
+}
+.product__add_to_cart{
+    text-transform: capitalize;
+}
+.product__add_to_cart svg > path{
+    stroke: var(--color-white);
+}

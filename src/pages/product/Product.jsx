@@ -8,6 +8,7 @@ import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
 import ProductBreadcrumb from "../../components/product/productBreadcrumb/ProductBreadcrumb";
 import ProductImages from "../../components/product/productImages/ProductImages";
+import ProductDetails from "../../components/product/productDetails/ProductDetails";
 
 import classes from "./product.module.css";
 
@@ -33,6 +34,7 @@ const Product = () => {
             <ProductBreadcrumb />
             <section className={classes.product__content}>
               <ProductImages />
+              <ProductDetails />
             </section>
           </>
         )
