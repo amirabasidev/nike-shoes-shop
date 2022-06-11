@@ -130,3 +130,12 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* Headline */
+.head__lg {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-xl);
+  text-transform: capitalize;
+  color: var(--color-black);
+  white-space: nowrap;
+}
