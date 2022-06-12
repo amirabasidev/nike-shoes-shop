@@ -1,0 +1,39 @@
+.product__comment{
+    padding: 15px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background: var(--color-white);
+    border: var(--border-sm);
+    border-radius: var(--border-radius-md);
+    -webkit-border-radius: var(--border-radius-md);
+    -moz-border-radius: var(--border-radius-md);
+    -ms-border-radius: var(--border-radius-md);
+    -o-border-radius: var(--border-radius-md);
+}
+.product__comment_name{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-xl);
+    letter-spacing: .4px;
+    text-transform: capitalize;
+    color: var(--color-black);
+}
+.product__comment_text{
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-md);
+    line-height: 25px;
+}
+.product__comment_replay{
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+.product__comment_replay svg > path{
+    stroke: var(--color-white);
+}
+.product__comment_replies{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
