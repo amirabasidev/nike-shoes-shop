@@ -14,7 +14,8 @@ import Tab from "../../components/UI/tabs/tab/Tab";
 import ProductAbout from "../../components/product/productAbout/ProductAbout";
 
 import classes from "./product.module.css";
-import { DocumentText } from "iconsax-react";
+import { Colorfilter, DocumentText } from "iconsax-react";
+import ProductFeatrues from "../../components/product/productFeatrues/ProductFeatrues";
 
 const Product = () => {
   const { name } = useParams();
@@ -43,6 +44,9 @@ const Product = () => {
             <Tabs>
               <Tab title="about" icon={<DocumentText size="100%" />}>
                 <ProductAbout />
+              </Tab>
+              <Tab title="featrues" icon={<Colorfilter size="100%" />}>
+                <ProductFeatrues />
               </Tab>
             </Tabs>
           </>
