@@ -3,6 +3,8 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { MessageAdd, MessageRemove } from "iconsax-react";
 
+import formValidComment from "../../../../utils/formValidate/formValidComment";
+
 import classes from "./productCommentForm.module.css";
 
 const ProductCommentForm = ({ getComments, parentId, setIsReplay }) => {
@@ -57,7 +59,9 @@ const ProductCommentForm = ({ getComments, parentId, setIsReplay }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    createComment();
+    if (formValidComment(values)) {
+      createComment();
+    }
   };
 
   return (
