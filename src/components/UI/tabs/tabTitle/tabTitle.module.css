@@ -1,0 +1,19 @@
+.tabs__item,.tabs__item_active {
+    min-width: 150px;
+    padding: 15px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-xl);
+    text-transform: capitalize;
+  }
+  .tabs__item_active{
+    color: var(--color-blue);
+  }
+  .tabs__item_active svg > path{
+    stroke: var(--color-blue);
+  }
