@@ -12,10 +12,11 @@ import ProductDetails from "../../components/product/productDetails/ProductDetai
 import Tabs from "../../components/UI/tabs/Tabs";
 import Tab from "../../components/UI/tabs/tab/Tab";
 import ProductAbout from "../../components/product/productAbout/ProductAbout";
+import ProductFeatrues from "../../components/product/productFeatrues/ProductFeatrues";
+import ProductComments from "../../components/product/productComments/ProductComments";
 
 import classes from "./product.module.css";
-import { Colorfilter, DocumentText } from "iconsax-react";
-import ProductFeatrues from "../../components/product/productFeatrues/ProductFeatrues";
+import { Colorfilter, DocumentText, MessageText1 } from "iconsax-react";
 
 const Product = () => {
   const { name } = useParams();
@@ -47,6 +48,9 @@ const Product = () => {
               </Tab>
               <Tab title="featrues" icon={<Colorfilter size="100%" />}>
                 <ProductFeatrues />
+              </Tab>
+              <Tab title="comments" icon={<MessageText1 size="100%" />}>
+                <ProductComments />
               </Tab>
             </Tabs>
           </>

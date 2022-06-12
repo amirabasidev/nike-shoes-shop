@@ -1,0 +1,12 @@
+.product__comments{
+    padding: 0 30px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 40px;
+}
+.product__comments_items{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
