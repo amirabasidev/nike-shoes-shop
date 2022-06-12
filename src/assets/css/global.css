@@ -24,8 +24,9 @@
 .form-control > label {
   font-size: var(--font-size-md);
 }
-.form-control > input {
-  width: 320;
+.form-control > input,
+.form-control > textarea {
+  width: 320px;
   padding: 7px 13px;
   border: var(--border-sm);
   font-size: var(--font-size-sm);
@@ -41,12 +42,18 @@
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
 }
+.form-control > textarea {
+  min-height: 100px;
+  max-height: 150px;
+  resize: vertical;
+}
 .form-control > input::placeholder {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-md);
   color: var(--color-text-muted);
 }
-.form-control > input:focus {
+.form-control > input:focus,
+.form-control > textarea:focus {
   border-color: var(--color-blue);
 }
 
@@ -95,22 +102,23 @@
 }
 
 /* Icon */
-.icon, .icon-white{
+.icon,
+.icon-white {
   width: 22px;
   height: 22px;
   box-sizing: content-box;
   display: inline-block;
   cursor: pointer;
 }
-.icon > svg > path{
+.icon > svg > path {
   stroke: var(--color-black);
 }
-.icon-white > svg >path{
+.icon-white > svg > path {
   stroke: var(--color-white);
 }
 
 /* Overlay */
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -119,14 +127,14 @@
   background: var(--color-black-light);
   visibility: hidden;
   opacity: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   z-index: var(--z-index-2);
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  -o-transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
-.overlay.show{
+.overlay.show {
   visibility: visible;
   opacity: 1;
 }
