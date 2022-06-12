@@ -1,15 +1,15 @@
 import { useSelector } from "react-redux";
 
 import useFetch from "../../../hooks/useFetch";
-
 import Error from "../../error/Error";
+
 import Spinner from "../../UI/spinner/Spinner";
+import ProductCommentsForm from "./productCommentForm/ProductCommentForm";
 
 import classes from "./productComments.module.css";
 
 const productComments = () => {
   const { id } = useSelector((state) => state.product.product);
-
   const url = `https://amirabasinasab.ir/nike/index.php/comments?productId=${id}`;
 
   const {
@@ -27,9 +27,8 @@ const productComments = () => {
         <Error error={error} retry={getComments} />
       ) : (
         <>
-          <div className={classes.product__comments_items}>
-            Comments
-          </div>
+          <ProductCommentsForm getComments={getComments} />
+          <div className={classes.product__comments_items}>Comments</div>
         </>
       )}
     </section>

@@ -1,0 +1,10 @@
+.product__comments_actions{
+    width: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+.product__comments_cancel svg > path,
+.product__comments_add_comment svg > path {
+  stroke: var(--color-white);
+}
