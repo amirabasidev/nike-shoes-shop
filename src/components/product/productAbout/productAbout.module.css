@@ -1,0 +1,11 @@
+.product__about h2{
+    font-size: var(--font-size-xxl);
+    color: var(--color-black);
+    font-weight: var(--font-weight-xxl);
+    margin-bottom: 15px;
+}
+.product__about p {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-lg);
+    line-height: 30px;
+}

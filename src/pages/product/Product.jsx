@@ -9,8 +9,12 @@ import Spinner from "../../components/UI/spinner/Spinner";
 import ProductBreadcrumb from "../../components/product/productBreadcrumb/ProductBreadcrumb";
 import ProductImages from "../../components/product/productImages/ProductImages";
 import ProductDetails from "../../components/product/productDetails/ProductDetails";
+import Tabs from "../../components/UI/tabs/Tabs";
+import Tab from "../../components/UI/tabs/tab/Tab";
+import ProductAbout from "../../components/product/productAbout/ProductAbout";
 
 import classes from "./product.module.css";
+import { DocumentText } from "iconsax-react";
 
 const Product = () => {
   const { name } = useParams();
@@ -36,6 +40,11 @@ const Product = () => {
               <ProductImages />
               <ProductDetails />
             </section>
+            <Tabs>
+              <Tab title="about" icon={<DocumentText size="100%" />}>
+                <ProductAbout />
+              </Tab>
+            </Tabs>
           </>
         )
       )}
