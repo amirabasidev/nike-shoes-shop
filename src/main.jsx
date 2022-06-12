@@ -9,6 +9,8 @@ import "./assets/css/global.css";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
+import 'react-toastify/dist/ReactToastify.css';
+
 ReactDOM.createRoot(document.getElementById('container')).render(
   <React.StrictMode>
     <App />
