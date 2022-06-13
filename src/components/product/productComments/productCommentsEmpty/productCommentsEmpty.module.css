@@ -1,0 +1,28 @@
+.product__comments_empty{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: var(--border-sm);
+    border-radius: var(--border-radius-md);
+    -webkit-border-radius: var(--border-radius-md);
+    -moz-border-radius: var(--border-radius-md);
+    -ms-border-radius: var(--border-radius-md);
+    -o-border-radius: var(--border-radius-md);
+}
+.product__comments_empty_icon {
+    width: 40px;
+    height: 40px;
+    cursor: auto;
+}
+.product__comments_empty_icon  > svg > path{
+    stroke: var(--color-yellow);
+}
+.product__comments_empty_text{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-lg);
+    color: var(--color-black);
+}

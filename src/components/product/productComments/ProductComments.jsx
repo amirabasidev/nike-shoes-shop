@@ -9,6 +9,7 @@ import ProductCommentsForm from "./productCommentForm/ProductCommentForm";
 import ProductComment from "./productComment/ProductComment";
 
 import classes from "./productComments.module.css";
+import ProductCommentsEmpty from "./productCommentsEmpty/ProductCommentsEmpty";
 
 const productComments = () => {
   const { id } = useSelector((state) => state.product.product);
@@ -40,21 +41,25 @@ const productComments = () => {
       ) : (
         <>
           <ProductCommentsForm getComments={getComments} />
-          <div className={classes.product__comments_items}>
-            <h3 className={classes.product__comments_count}>
-              Count Comments : {commentNotParent.length}
-            </h3>
-            {commentNotParent.map((comment) => (
-              <ProductComment
-                key={comment.id}
-                comment={comment}
-                replies={getReplies(comment.id)}
-                isReplay={isReplay}
-                setIsReplay={setIsReplay}
-                getComments={getComments}
-              />
-            ))}
-          </div>
+          {comments.length > 0 ? (
+            <div className={classes.product__comments_items}>
+              <h3 className={classes.product__comments_count}>
+                Count Comments : {commentNotParent.length}
+              </h3>
+              {commentNotParent.map((comment) => (
+                <ProductComment
+                  key={comment.id}
+                  comment={comment}
+                  replies={getReplies(comment.id)}
+                  isReplay={isReplay}
+                  setIsReplay={setIsReplay}
+                  getComments={getComments}
+                />
+              ))}
+            </div>
+          ) : (
+            <ProductCommentsEmpty />
+          )}
         </>
       )}
     </section>
