@@ -57,6 +57,13 @@
   border-color: var(--color-blue);
 }
 
+@media only screen and (max-width: 768px) {
+  .form-control > input,
+  .form-control > textarea {
+    width: 100%;
+  }
+}
+
 /* Global Class Button */
 .btn,
 .btn-icon {
