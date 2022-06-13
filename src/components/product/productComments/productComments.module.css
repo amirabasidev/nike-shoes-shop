@@ -10,3 +10,9 @@
     gap: 15px;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 992px) {
+    .product__comments{
+        flex-direction: column;
+    }
+}

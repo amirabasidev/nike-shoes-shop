@@ -8,3 +8,9 @@
 .product__comments_add_comment svg > path {
   stroke: var(--color-white);
 }
+
+@media only screen and (max-width: 576px) {
+  .product__comments_actions{
+    flex-direction: column-reverse;
+  }
+}
