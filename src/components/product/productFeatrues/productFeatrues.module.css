@@ -32,3 +32,25 @@
     width: 75%;
     font-weight: var(--font-weight-lg);
 }
+
+@media only screen and (max-width: 768px) {
+    .product__featrues_item_title{
+        width: 49%;
+    }
+    .product__featrues_item_value{
+        width: 49%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .product__featrues_ul{
+        gap: 20px;
+    }
+    .product__featrues_item{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .product__featrues_item_title,.product__featrues_item_value{
+        width: 100%;
+    }
+}
