@@ -71,3 +71,31 @@
 .product__images:hover .product__images_slider_next {
   right: 10px;
 }
+
+@media only screen and (max-width: 992px) {
+  .product__images {
+    max-width: 320px;
+    max-height: 400px;
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .product__images_slider,
+  .product__images_groups {
+    width: 100%;
+    max-width: unset;
+  }
+  .product__images_groups {
+    flex-direction: row;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product__images,.product__images_slider{
+    max-width: unset;
+    max-height: unset;
+  }
+  .product__images_slider{
+    height: 60vh;
+  }
+}

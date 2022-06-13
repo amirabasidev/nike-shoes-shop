@@ -7,3 +7,15 @@
   display: flex;
   gap: 60px;
 }
+
+@media only screen and (max-width: 992px) {
+  .product__content{
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .product__content{
+    flex-direction: column;
+  }
+}
