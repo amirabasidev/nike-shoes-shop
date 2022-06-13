@@ -9,22 +9,24 @@ const Tabs = ({ children }) => {
 
   return (
     <section className={classes.tabs}>
-      <ul className={classes.tabs__items}>
-        {children.map(({ props }, index) => (
-          <TabTitle
-            key={index}
-            index={index}
-            icon={props.icon}
-            title={props.title}
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-          />
-        ))}
-      </ul>
-      <span
-        style={{ transform: `translateX(${activeTab * 150}px)` }}
-        className={classes.border}
-      ></span>
+      <div className={classes.tabs__items_container}>
+        <ul className={classes.tabs__items}>
+          {children.map(({ props }, index) => (
+            <TabTitle
+              key={index}
+              index={index}
+              icon={props.icon}
+              title={props.title}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
+          ))}
+        </ul>
+        <span
+          style={{ transform: `translateX(${activeTab * 150}px)` }}
+          className={classes.border}
+        ></span>
+      </div>
       {children[activeTab]}
     </section>
   );
