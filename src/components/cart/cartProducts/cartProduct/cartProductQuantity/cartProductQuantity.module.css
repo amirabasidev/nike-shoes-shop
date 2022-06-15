@@ -1,0 +1,11 @@
+.cart__Product_quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.cart__Product_quantity_count {
+  text-align: center;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-lg);
+  color: var(--color-pink);
+}

@@ -8,9 +8,10 @@ import ProductSize from "../../../product/productDetails/productSize/ProductSize
 import ProductColors from "../../../product/productDetails/productColors/ProductColors";
 
 import classes from "./cartProduct.module.css";
+import CartProductQuantity from "./cartProductQuantity/CartProductQuantity";
 
 const CartProduct = ({ product, index }) => {
-  const { name, images, colors, color, sizes, size, priceTotal } =
+  const { name, images, colors, color, sizes, size, quantity, priceTotal } =
     product;
 
   const dispatch = useDispatch();
@@ -45,6 +46,10 @@ const CartProduct = ({ product, index }) => {
             productColors={colors}
             onChangeHandler={onChangeHandler}
             value={color}
+          />
+          <CartProductQuantity
+            quantity={quantity}
+            setQuantity={onChangeHandler}
           />
         </form>
         <div className={classes.cart__product_actions}>
