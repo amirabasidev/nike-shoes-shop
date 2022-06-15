@@ -1,4 +1,6 @@
-const CheckoutForm = ({ values, onChangeHandler,disabled }) => {
+import CheckoutPosts from "./checkoutPosts/CheckoutPosts";
+
+const CheckoutForm = ({ values, onChangeHandler, disabled }) => {
   return (
     <form>
       <div className="form-control">
@@ -70,6 +72,7 @@ const CheckoutForm = ({ values, onChangeHandler,disabled }) => {
           disabled={disabled}
         ></textarea>
       </div>
+      <CheckoutPosts onChangeHandler={onChangeHandler} disabled={disabled} />
     </form>
   );
 };
