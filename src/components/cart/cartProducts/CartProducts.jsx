@@ -1,5 +1,7 @@
 import { useSelector } from "react-redux";
 
+import CartProduct from "./cartProduct/CartProduct";
+
 import classes from "./cartProducts.module.css";
 
 const CartProducts = () => {
@@ -8,7 +10,7 @@ const CartProducts = () => {
   return (
     <section className={classes.cart__products}>
       {cart.map((product, index) => (
-        <div>product</div>
+        <CartProduct key={product.id} product={product} index={index} />
       ))}
     </section>
   );
