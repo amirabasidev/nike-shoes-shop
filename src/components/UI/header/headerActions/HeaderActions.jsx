@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import {
   ArrowSwapVertical,
   SearchNormal1,
@@ -9,6 +10,8 @@ import {
 import classes from "./headerActions.module.css";
 
 const HeaderActions = () => {
+  const { cart } = useSelector((state) => state.cart);
+  
   return (
     <section className={classes.header__actions}>
       <span className="icon">
@@ -19,7 +22,7 @@ const HeaderActions = () => {
       </Link>
       <Link to="/cart" className={`icon ${classes.cart__icon}`}>
         <ShoppingCart size="100%" />
-        <span className={classes.cart__icon_count}>2</span>
+        <span className={classes.cart__icon_count}>{cart.length}</span>
       </Link>
       <Link to="/compare" className="icon">
         <ArrowSwapVertical size="100%" />
