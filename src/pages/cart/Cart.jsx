@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 
 import CartProducts from "../../components/cart/cartProducts/CartProducts";
 import CartDetails from "../../components/cart/cartDetails/CartDetails";
+import CartEmpty from "../../components/cart/cartEmpty/CartEmpty";
 
 import classes from "./cart.module.css";
 
@@ -16,7 +17,7 @@ const Cart = () => {
           <CartDetails />
         </>
       ) : (
-        <div>Cart Empty</div>
+        <CartEmpty />
       )}
     </section>
   );
