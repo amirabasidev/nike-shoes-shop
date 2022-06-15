@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Home, Product } from "../config/routes";
+import { Home, Product, Cart } from "../config/routes";
 
 import Spinner from "../components/UI/spinner/Spinner";
 
@@ -11,6 +11,7 @@ const publicRoute = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:name" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Suspense>
   );
