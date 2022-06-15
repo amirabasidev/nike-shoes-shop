@@ -1,0 +1,10 @@
+.checkout {
+  width: fit-content;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .checkout{
+    width: 100%;
+  }
+}
