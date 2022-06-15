@@ -1,0 +1,22 @@
+.checkout__details{
+    margin-top: 15px;
+}
+.checkout__details_title{
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-xxl);
+    color: var(--color-blue);
+    margin-bottom: 10px;
+}
+.checkout__details_item{
+    margin-bottom: 10px;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-xl);
+    color: var(--color-black);
+}
+.checkout__details_item::after{
+    content: ' $';
+}
+.checkout__details_payment{
+    width: 100%;
+    justify-content: center;
+}
