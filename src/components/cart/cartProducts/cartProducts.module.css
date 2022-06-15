@@ -1,0 +1,12 @@
+.cart__products {
+  width: 69%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+  .cart__products {
+    width: 100%;
+  }
+}
