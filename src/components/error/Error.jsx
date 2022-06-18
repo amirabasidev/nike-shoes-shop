@@ -8,7 +8,7 @@ const Error = ({ retry, error }) => {
       <span className={`icon ${classes.error__icon}`}>
         <Forbidden2 size="100%" />
       </span>
-      <p className={classes.error__text}>{error}</p>
+      <p className={classes.error__text}>{String(error)}</p>
       <button onClick={retry} className="btn-icon btn-primary">
         <span className={`icon ${classes.error__btn_icon}`}>
           <ArrowRotateRight size="100%" />
