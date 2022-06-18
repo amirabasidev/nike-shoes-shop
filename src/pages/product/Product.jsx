@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import { getProduct } from "../../redux/products/productActions";
+import { getProduct } from "../../redux/product/productActions";
 
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
