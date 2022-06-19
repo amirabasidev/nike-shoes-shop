@@ -1,4 +1,9 @@
-import { FILTER_SEARCH, FILTER_CATEGORY, FILTER_PRICE } from "./filtersTypes";
+import {
+  FILTER_SEARCH,
+  FILTER_CATEGORY,
+  FILTER_PRICE,
+  CLEAR_ALL_FILTER,
+} from "./filtersTypes";
 
 const initialState = {
   search: "",
@@ -30,6 +35,8 @@ const productReducers = (state = initialState, action) => {
       };
     case FILTER_PRICE:
       return { ...state, price: payload };
+    case CLEAR_ALL_FILTER:
+      return initialState;
     default:
       return state;
   }

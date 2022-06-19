@@ -1,3 +1,4 @@
 export const FILTER_SEARCH = "FILTER_SEARCH";
 export const FILTER_CATEGORY = "FILTER_CATEGORY";
 export const FILTER_PRICE = "FILTER_PRICE";
+export const CLEAR_ALL_FILTER = "CLEAR_ALL_FILTER";
