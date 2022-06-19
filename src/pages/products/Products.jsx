@@ -7,6 +7,7 @@ import { clearAllFilter } from "../../redux/filters/filtersActions";
 
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
+import ProductItems from "../../components/products/productItems/ProductItems";
 
 import classes from "./products.module.css";
 
@@ -34,7 +35,7 @@ const Products = () => {
       ) : products.length > 0 ? (
         <>
           {/* Products Filter */}
-          {/* Products Items */}
+          <ProductItems />
         </>
       ) : (
         "Not Found Products"
