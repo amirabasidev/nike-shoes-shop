@@ -8,6 +8,7 @@ import { clearAllFilter } from "../../redux/filters/filtersActions";
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
 import ProductItems from "../../components/products/productItems/ProductItems";
+import ProductsNotFound from "../../components/products/productsNotFound/ProductsNotFound";
 
 import classes from "./products.module.css";
 
@@ -38,7 +39,7 @@ const Products = () => {
           <ProductItems />
         </>
       ) : (
-        "Not Found Products"
+        <ProductsNotFound />
       )}
     </section>
   );
