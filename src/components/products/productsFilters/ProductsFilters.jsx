@@ -2,6 +2,8 @@ import { FilterSquare } from "iconsax-react";
 
 import useToggle from "../../../hooks/useToggle";
 
+import FilterSearch from "./filterSearch/FilterSearch";
+
 import classes from "./productsFilters.module.css";
 
 const ProductsFilters = () => {
@@ -24,7 +26,7 @@ const ProductsFilters = () => {
         Filters
       </button>
       <section ref={productsFiltes__Ref} className={classes.products__filtes}>
-        {/* Filters Search */}
+        <FilterSearch />
         {/* Filters Category */}
         {/* Filters Price */}
       </section>
