@@ -8,6 +8,7 @@ import { clearAllFilter } from "../../redux/filters/filtersActions";
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
 import ProductItems from "../../components/products/productItems/ProductItems";
+import ProductsFilters from "../../components/products/productsFilters/ProductsFilters";
 import ProductsNotFound from "../../components/products/productsNotFound/ProductsNotFound";
 
 import classes from "./products.module.css";
@@ -35,7 +36,7 @@ const Products = () => {
         <Error error={error} retry={getProducts} />
       ) : products.length > 0 ? (
         <>
-          {/* Products Filter */}
+          <ProductsFilters />
           <ProductItems />
         </>
       ) : (
