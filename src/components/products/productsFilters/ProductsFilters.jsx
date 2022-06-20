@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { FilterSquare } from "iconsax-react";
 
 import useToggle from "../../../hooks/useToggle";
@@ -7,9 +8,12 @@ import FilterCategory from "./filterCategory/FilterCategory";
 import FilterSearch from "./filterSearch/FilterSearch";
 
 import classes from "./productsFilters.module.css";
+import FilterPrice from "./filterPrice/FilterPrice";
 
 const ProductsFilters = () => {
   const { categoryName } = useParams();
+
+  const products = useSelector((state) => state.products.products);
 
   const [
     productsFiltes__Ref,
@@ -32,7 +36,7 @@ const ProductsFilters = () => {
       <section ref={productsFiltes__Ref} className={classes.products__filtes}>
         <FilterSearch />
         {!categoryName && <FilterCategory />}
-        {/* Filters Price */}
+        {products.length > 3 && <FilterPrice />}
       </section>
     </ContainerToggle>
   );
