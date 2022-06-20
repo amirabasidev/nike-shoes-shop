@@ -5,6 +5,7 @@ import filterProducts from "../../../utils/filtersProducts/filtersProducts";
 
 import Pagination from "../../pagination/Pagination";
 import ProductsItem from "../../productsSlider/productsItem/ProductsItem";
+import FiltersNotFound from "./filtersNotFound/FiltersNotFound";
 
 import classes from "./productItems.module.css";
 
@@ -51,7 +52,7 @@ const ProductItems = () => {
           />
         </>
       ) : (
-        "FiltersNotFound"
+        <FiltersNotFound />
       )}
     </section>
   );
