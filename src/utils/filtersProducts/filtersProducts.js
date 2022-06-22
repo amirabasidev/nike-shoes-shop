@@ -11,9 +11,11 @@ const filterProducts = (products, { search, categories, price }) => {
     );
   }
 
-  products = products.filter(
-    (product) => product.price >= price[0] && product.price <= price[1],
-  );
+  if (price[1] !== 0) {
+    products = products.filter(
+      (product) => product.price >= price[0] && product.price <= price[1],
+    );
+  }
 
   return products;
 };
