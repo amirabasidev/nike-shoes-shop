@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   ArrowSwapVertical,
   SearchNormal1,
@@ -7,17 +8,28 @@ import {
   User,
 } from "iconsax-react";
 
+import { getUser } from "../../../../redux/user/userActions";
+
 import classes from "./headerActions.module.css";
 
 const HeaderActions = () => {
+  const dispatch = useDispatch();
+
   const { cart } = useSelector((state) => state.cart);
-  
+  const isLogin = useSelector((state) => state.user.isLogin);
+
+  const accountUrl = isLogin ? "/panel" : "/login";
+
+  useEffect(() => {
+    dispatch(getUser());
+  }, []);
+
   return (
     <section className={classes.header__actions}>
       <span className="icon">
         <SearchNormal1 size="100%" />
       </span>
-      <Link to="/login" className="icon">
+      <Link to={accountUrl} className="icon">
         <User size="100%" />
       </Link>
       <Link to="/cart" className={`icon ${classes.cart__icon}`}>
