@@ -7,3 +7,4 @@ export const Checkout = lazy(() => import("../pages/checkout/Checkout"));
 export const Products = lazy(() => import("../pages/products/Products"));
 export const Login = lazy(() => import("../pages/login/Login"));
 export const Register = lazy(() => import("../pages/register/Register"));
+export const PrivateRoute = lazy(() => import("../routes/PrivateRoute"));
