@@ -1,0 +1,13 @@
+.register {
+  max-width: fit-content;
+  margin: 30px auto 0 auto;
+}
+.register > h1 {
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .register {
+    max-width: 100%;
+  }
+}
