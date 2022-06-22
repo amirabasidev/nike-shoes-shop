@@ -1,0 +1,17 @@
+.login {
+  max-width: fit-content;
+  min-height: inherit;
+  margin: 30px auto 0 auto;
+}
+.login > h1 {
+  margin-bottom: 30px;
+}
+.login > h6 {
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .login {
+    max-width: 100%;
+  }
+}

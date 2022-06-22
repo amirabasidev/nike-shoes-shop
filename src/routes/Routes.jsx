@@ -1,7 +1,14 @@
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { Home, Product, Cart, Checkout, Products } from "../config/routes";
+import {
+  Home,
+  Product,
+  Cart,
+  Checkout,
+  Products,
+  Login,
+} from "../config/routes";
 
 import Spinner from "../components/UI/spinner/Spinner";
 
@@ -15,6 +22,7 @@ const publicRoute = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/products" element={<Products />} />
         <Route path="/category/:categoryName" element={<Products />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Suspense>
   );
