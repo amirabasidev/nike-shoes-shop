@@ -1,0 +1,32 @@
+.sidebar {
+  padding: 0 10px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar__item,
+.sidebar__item_active {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-xl);
+  color: var(--color-black);
+  background: var(--color-white);
+  border: var(--border-sm);
+  border-radius: var(--border-radius-sm);
+  -webkit-border-radius: var(--border-radius-sm);
+  -moz-border-radius: var(--border-radius-sm);
+  -ms-border-radius: var(--border-radius-sm);
+  -o-border-radius: var(--border-radius-sm);
+}
+.sidebar__item_active {
+  background: var(--color-yellow);
+  color: var(--color-white);
+}
+.sidebar__item_active svg > path {
+  stroke: var(--color-white);
+}

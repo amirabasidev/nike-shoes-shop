@@ -5,6 +5,7 @@ import { getUser } from "../../redux/user/userActions";
 
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
+import Sidebar from "../../components/panel/sidebar/Sidebar";
 
 import classes from "./panel.module.css";
 
@@ -24,7 +25,7 @@ const Panel = () => {
       ) : (
         user !== null && (
           <>
-            {/* SideBar */}
+            <Sidebar />
             <section className={classes.panel__content}>
               <Outlet />
             </section>
