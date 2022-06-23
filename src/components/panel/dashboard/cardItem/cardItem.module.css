@@ -1,0 +1,32 @@
+.dashboard__card {
+  padding: 10px 20px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: var(--border-sm);
+  border-radius: var(--border-radius-sm);
+  -webkit-border-radius: var(--border-radius-sm);
+  -moz-border-radius: var(--border-radius-sm);
+  -ms-border-radius: var(--border-radius-sm);
+  -o-border-radius: var(--border-radius-sm);
+}
+.dashboard__card_icon {
+  width: 30px;
+  height: 30px;
+  cursor: auto;
+}
+.dashboard__card svg > path {
+  stroke: var(--color-yellow);
+}
+.dashboard__card_title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-xl);
+  color: var(--color-yellow);
+}
+.dashboard__card_value {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-xl);
+  color: var(--color-blue);
+}
