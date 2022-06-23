@@ -1,0 +1,29 @@
+.table__wrapper {
+  padding: 10px 0;
+  width: 100%;
+  overflow-y: auto;
+}
+.table {
+  width: 100%;
+  min-width: 700px;
+  border-spacing: 0;
+}
+.table tr {
+  text-align: left;
+}
+.table > tbody > tr > td {
+  padding: 15px;
+  border-bottom: var(--border-sm);
+}
+
+.table th,
+.table td {
+  text-transform: capitalize;
+  padding: 5px 10px;
+  width: 1%;
+  white-space: nowrap;
+}
+th {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-xl);
+}
