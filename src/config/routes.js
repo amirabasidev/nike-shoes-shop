@@ -11,3 +11,4 @@ export const PrivateRoute = lazy(() => import("../routes/PrivateRoute"));
 export const Panel = lazy(() => import("../pages/panel/Panel"));
 export const Dashboard = lazy(() => import("../components/panel/dashboard/Dashboard"));
 export const Orders = lazy(() => import("../components/panel/orders/Orders"));
+export const Order = lazy(() => import("../components/panel/order/Order"));

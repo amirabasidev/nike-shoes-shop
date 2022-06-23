@@ -1,0 +1,27 @@
+.order__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.order__details_price::after {
+  content: " $";
+}
+.order__products_title {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-size-xxl);
+  color: var(--color-blue);
+}
+.order__products_icon {
+  width: 30px;
+  height: 30px;
+}
+.order__products_icon > svg > path {
+  stroke: var(--color-blue);
+}
+.order__products {
+  display: flex;
+  gap: 10px;
+}

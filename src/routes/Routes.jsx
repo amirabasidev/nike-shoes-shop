@@ -13,6 +13,7 @@ import {
   Panel,
   Dashboard,
   Orders,
+  Order,
 } from "../config/routes";
 
 import Spinner from "../components/UI/spinner/Spinner";
@@ -33,6 +34,7 @@ const publicRoute = () => {
           <Route path="/panel" element={<Panel />}>
             <Route path="" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
+            <Route path="orders/:orderId" element={<Order />} />
           </Route>
         </Route>
       </Routes>
