@@ -1,0 +1,20 @@
+.order__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.order__empty_icon {
+  width: 70px;
+  height: 70px;
+  cursor: auto;
+}
+.order__empty_icon > svg > path {
+    stroke: var(--color-pink);
+  }
+.order__empty_title{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-xl);
+    color: var(--color-yellow);
+}

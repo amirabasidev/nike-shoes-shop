@@ -6,6 +6,7 @@ import Spinner from "../../UI/spinner/Spinner";
 import Error from "../../error/Error";
 import Table from "../../UI/table/Table";
 import OrderItem from "../../UI/table/orderItem/OrderItem";
+import OrderEmpty from "./orderEmpty/OrderEmpty";
 
 const Orders = () => {
   const user = useSelector((state) => state.user.user);
@@ -28,12 +29,14 @@ const Orders = () => {
         <Spinner minHeight="220px" />
       ) : error !== null ? (
         <Error error={error} retry={getOrders} />
-      ) : (
+      ) : orders.length > 0 ? (
         <Table
           headData={ordersHead}
           bodyData={orders}
           renderBody={(order) => <OrderItem order={order} />}
         />
+      ) : (
+        <OrderEmpty />
       )}
     </section>
   );
