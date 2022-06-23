@@ -10,6 +10,7 @@ import {
   Login,
   Register,
   PrivateRoute,
+  Panel,
 } from "../config/routes";
 
 import Spinner from "../components/UI/spinner/Spinner";
@@ -27,8 +28,8 @@ const publicRoute = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route element={<PrivateRoute />}>
-          {/* Panel */}
-          </Route>
+          <Route path="/panel" element={<Panel />}></Route>
+        </Route>
       </Routes>
     </Suspense>
   );
