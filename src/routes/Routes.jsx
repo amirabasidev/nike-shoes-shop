@@ -14,6 +14,7 @@ import {
   Dashboard,
   Orders,
   Order,
+  Profile,
 } from "../config/routes";
 
 import Spinner from "../components/UI/spinner/Spinner";
@@ -35,6 +36,7 @@ const publicRoute = () => {
             <Route path="" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
             <Route path="orders/:orderId" element={<Order />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
         </Route>
       </Routes>
