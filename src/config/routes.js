@@ -10,3 +10,4 @@ export const Register = lazy(() => import("../pages/register/Register"));
 export const PrivateRoute = lazy(() => import("../routes/PrivateRoute"));
 export const Panel = lazy(() => import("../pages/panel/Panel"));
 export const Dashboard = lazy(() => import("../components/panel/dashboard/Dashboard"));
+export const Orders = lazy(() => import("../components/panel/orders/Orders"));
