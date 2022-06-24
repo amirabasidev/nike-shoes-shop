@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { Colorfilter, DocumentText, MessageText1 } from "iconsax-react";
 
 import { getProduct } from "../../redux/product/productActions";
 
@@ -16,7 +17,6 @@ import ProductFeatrues from "../../components/product/productFeatrues/ProductFea
 import ProductComments from "../../components/product/productComments/ProductComments";
 
 import classes from "./product.module.css";
-import { Colorfilter, DocumentText, MessageText1 } from "iconsax-react";
 
 const Product = () => {
   const { name } = useParams();
@@ -26,7 +26,7 @@ const Product = () => {
 
   useEffect(() => {
     dispatch(getProduct(name));
-  }, []);
+  }, [name]);
 
   return (
     <section className={classes.product}>
