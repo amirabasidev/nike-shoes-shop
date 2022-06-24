@@ -30,7 +30,7 @@ const Profile = () => {
       );
 
       if (response.ok) {
-        const newToken = response.text();
+        const newToken =  await response.text();
         localStorage.setItem("token", newToken);
         toast.success("Edit User Successfully!");
       }
