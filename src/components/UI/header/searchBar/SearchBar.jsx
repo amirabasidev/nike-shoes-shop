@@ -6,6 +6,7 @@ import debounce from "../../../../utils/debounce/debounce";
 
 import Error from "../../../error/Error";
 import Spinner from "../../../UI/spinner/Spinner";
+import SearchBarProduct from "./searchBarProduct/SearchBarProduct";
 
 import classes from "./searchBar.module.css";
 
@@ -60,7 +61,13 @@ const SearchBar = ({ searchBar__Ref, closeSearchBar, SearchBarContainer }) => {
           ) : error !== null ? (
             <Error error={error} retry={getProducts} />
           ) : (
-            products.map((product) => <h3>Search Product</h3>)
+            products.map((product) => (
+              <SearchBarProduct
+                key={product.id}
+                product={product}
+                closeSearchBar={closeSearchBar}
+              />
+            ))
           )}
         </section>
       </section>

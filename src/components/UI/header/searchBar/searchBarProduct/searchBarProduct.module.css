@@ -1,0 +1,27 @@
+.search__bar_product {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.search__bar_product_img {
+  width: 150px;
+}
+.search__bar_product_details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+.search__bar_product_name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-xl);
+  color: var(--color-black);
+}
+.search__bar_product_price{
+    margin-top: 10px;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-lg);
+    color: var(--color-blue);
+}
+.search__bar_product_price::after{
+    content: ' $';
+}
