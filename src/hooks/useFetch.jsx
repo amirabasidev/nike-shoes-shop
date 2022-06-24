@@ -39,7 +39,7 @@ const useFetch = (defaultValue, url) => {
   };
 
   useEffect(() => {
-    fetchData();
+    url !== "" && fetchData();
   }, [url]);
 
   return { ...state, fetchData };
