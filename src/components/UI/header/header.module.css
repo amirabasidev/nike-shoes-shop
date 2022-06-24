@@ -8,3 +8,8 @@
   width: 80px;
   margin-right: 20px;
 }
+.search__bar_show{
+  visibility: visible;
+  opacity: 1;
+  top: 10%;
+}

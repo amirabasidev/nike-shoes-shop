@@ -12,7 +12,7 @@ import { getUser } from "../../../../redux/user/userActions";
 
 import classes from "./headerActions.module.css";
 
-const HeaderActions = () => {
+const HeaderActions = ({ openSearchBar }) => {
   const dispatch = useDispatch();
 
   const { cart } = useSelector((state) => state.cart);
@@ -26,9 +26,9 @@ const HeaderActions = () => {
 
   return (
     <section className={classes.header__actions}>
-      <span className="icon">
+      <button onClick={openSearchBar} className="icon">
         <SearchNormal1 size="100%" />
-      </span>
+      </button>
       <Link to={accountUrl} className="icon">
         <User size="100%" />
       </Link>
