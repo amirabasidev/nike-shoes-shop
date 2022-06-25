@@ -3,6 +3,10 @@
   flex-direction: column;
   gap: 10px;
 }
+.order__details > h6{
+  white-space: normal;
+  line-height: 30px;
+}
 .order__details_price::after {
   content: " $";
 }
@@ -22,6 +26,8 @@
   stroke: var(--color-blue);
 }
 .order__products {
+  min-width: 100%;
   display: flex;
   gap: 10px;
+  overflow: auto;
 }

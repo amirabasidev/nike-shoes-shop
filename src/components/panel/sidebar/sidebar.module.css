@@ -30,3 +30,34 @@
 .sidebar__item_active svg > path {
   stroke: var(--color-white);
 }
+
+.sidebar__toggle{
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidebar {
+    min-width: 260px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    padding: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+  .sidebar.show {
+    height: auto;
+    max-height: 165px;
+    overflow: auto;
+  }
+  .sidebar__toggle{
+    display: block;
+  }
+}

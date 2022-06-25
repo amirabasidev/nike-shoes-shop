@@ -1,7 +1,14 @@
-.form{
-    display: flex;
-    flex-wrap: wrap;
+.form {
+  display: flex;
+  flex-wrap: wrap;
 }
-.form > *{
-    margin-right: 15px;
+.form > * {
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .form > *,
+  .form input {
+    width: 100%;
+  }
 }
