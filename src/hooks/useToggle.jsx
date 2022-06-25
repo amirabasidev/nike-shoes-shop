@@ -10,8 +10,15 @@ const useToggle = (showClass) => {
   };
 
   const closeToggle = () => {
-    container__Ref.current && container__Ref.current.classList.remove(showClass);
+    container__Ref.current &&
+      container__Ref.current.classList.remove(showClass);
     overlay__Ref.current && overlay__Ref.current.classList.remove("show");
+  };
+
+  const toggle = () => {
+    container__Ref.current &&
+      container__Ref.current.classList.toggle(showClass);
+    overlay__Ref.current && overlay__Ref.current.classList.toggle("show");
   };
 
   const ContainerToggle = ({ children }) => {
@@ -23,7 +30,7 @@ const useToggle = (showClass) => {
     );
   };
 
-  return [container__Ref, openToggle, closeToggle, ContainerToggle];
+  return [container__Ref, openToggle, closeToggle, ContainerToggle, toggle];
 };
 
 export default useToggle;
