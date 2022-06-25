@@ -7,16 +7,24 @@ import { AddSquare } from "iconsax-react";
 import { addToCart } from "../../../redux/cart/cartActions";
 import formValidProductToCart from "../../../utils/formValidate/formValidProductToCart";
 import productPriceTotal from "../../../utils/productPriceTotal/productPriceTotal";
+import checkProductInCart from "../../../utils/checkProductInCart/checkProductInCart";
 
 import ProductSize from "./productSize/ProductSize";
 import ProductColors from "./productColors/ProductColors";
+import ProductInCart from "./productInCart/ProductInCart";
 
 import classes from "./productDetails.module.css";
 
 const ProductDetails = () => {
   const product = useSelector((state) => state.product.product);
 
+  const cart = useSelector((state) => state.cart.cart);
+
   const dispatch = useDispatch();
+
+  const [productInCart, setProductInCart] = useState(
+    checkProductInCart(product.id, cart),
+  );
 
   const [values, setValues] = useState({
     color: null,
@@ -47,6 +55,8 @@ const ProductDetails = () => {
 
       dispatch(addToCart(productToCart));
 
+      setProductInCart(true);
+
       toast.success("Add To Cart successfully !");
     }
   };
@@ -64,23 +74,32 @@ const ProductDetails = () => {
         </Link>
       </h3>
       <p className={classes.product__details_desc}>{product.description}</p>
-      <ProductSize onChangeHandler={onChangeHandler} value={values.size} />
-      <ProductColors onChangeHandler={onChangeHandler} value={values.color} />
-      <h6 className="head__lg">
-        price :{" "}
-        <span className={classes.product__details_price}>
-          {values.priceTotal} $
-        </span>
-      </h6>
-      <button
-        onClick={addToCartHandler}
-        className={`btn-icon btn-primary ${classes.product__add_to_cart}`}
-      >
-        <span className="icon">
-          <AddSquare size="100%" />
-        </span>
-        add to cart
-      </button>
+      {!productInCart ? (
+        <>
+          <ProductSize onChangeHandler={onChangeHandler} value={values.size} />
+          <ProductColors
+            onChangeHandler={onChangeHandler}
+            value={values.color}
+          />
+          <h6 className="head__lg">
+            price :{" "}
+            <span className={classes.product__details_price}>
+              {values.priceTotal} $
+            </span>
+          </h6>
+          <button
+            onClick={addToCartHandler}
+            className={`btn-icon btn-primary ${classes.product__add_to_cart}`}
+          >
+            <span className="icon">
+              <AddSquare size="100%" />
+            </span>
+            add to cart
+          </button>
+        </>
+      ) : (
+        <ProductInCart />
+      )}
     </section>
   );
 };
