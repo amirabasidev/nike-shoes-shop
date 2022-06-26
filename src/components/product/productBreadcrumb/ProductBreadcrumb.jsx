@@ -5,7 +5,7 @@ import { ArrowRight2 } from "iconsax-react";
 import classes from "./productBreadcrumb.module.css";
 
 const ProductBreadcrumb = () => {
-  const { name, categoryName } = useSelector((state) => state.product.product);
+  const { name, category } = useSelector((state) => state.product.product);
 
   return (
     <section className={classes.product__breadcrumb_container}>
@@ -15,10 +15,10 @@ const ProductBreadcrumb = () => {
           <ArrowRight2 size="16" />
         </Link>
         <Link
-          to={`/category/${categoryName}`}
+          to={`/category/${category.categoryName}`}
           className={classes.product__breadcrumb_link}
         >
-          {categoryName}
+          {category.categoryName}
           <ArrowRight2 size="16" />
         </Link>
         <h6 className={classes.product__breadcrumb_name}>{name}</h6>

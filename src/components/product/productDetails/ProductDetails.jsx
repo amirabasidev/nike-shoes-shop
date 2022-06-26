@@ -68,9 +68,9 @@ const ProductDetails = () => {
         category :{" "}
         <Link
           className={classes.product__details_category_link}
-          to={`/category/${product.categoryName}`}
+          to={`/category/${product.category.categoryName}`}
         >
-          {product.categoryName}
+          {product.category.categoryName}
         </Link>
       </h3>
       <p className={classes.product__details_desc}>{product.description}</p>
