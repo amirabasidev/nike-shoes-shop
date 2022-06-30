@@ -1,0 +1,22 @@
+.product__sizes {
+  display: flex;
+  gap: 10px;
+}
+.product__sizes_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.product__sizes_item {
+  height: fit-content;
+  padding: 5px 10px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-md);
+  color: var(--color-white);
+  background: var(--color-black);
+  border-radius: var(--border-radius-sm);
+  -webkit-border-radius: var(--border-radius-sm);
+  -moz-border-radius: var(--border-radius-sm);
+  -ms-border-radius: var(--border-radius-sm);
+  -o-border-radius: var(--border-radius-sm);
+}
