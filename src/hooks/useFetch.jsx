@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 
-const useFetch = (defaultValue, url) => {
+const useFetch = (defaultValue, url, items) => {
   const FETCH_REQUEST = "FETCH_REQUEST";
   const FETCH_REQUEST_SUCCESS = "FETCH_USER_SUCCESS";
   const FETCH_REQUEST_FAIURE = "FETCH_USER_FAIURE";
@@ -48,11 +48,29 @@ const useFetch = (defaultValue, url) => {
     }
   };
 
+  const getDataItems = () => {
+    dispatch({ type: FETCH_REQUEST });
+
+    const getItems = items.map((item) => getRequest(url + item));
+
+    Promise.all(getItems)
+      .then((data) => {
+        dispatch({ type: FETCH_REQUEST_SUCCESS, payload: data });
+      })
+      .catch((error) => {
+        dispatch({ type: FETCH_REQUEST_FAIURE, payload: error });
+      });
+  };
+
   useEffect(() => {
-    url !== "" && getData();
+    if (items !== undefined && items.length > 0) {
+      getDataItems();
+    } else if (items === undefined && url !== "") {
+      getData();
+    }
   }, [url]);
 
-  return { ...state, getData };
+  return { ...state, getData, getDataItems };
 };
 
 export default useFetch;
