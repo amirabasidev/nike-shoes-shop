@@ -17,6 +17,7 @@ const Compare = () => {
     loading,
     error,
     getDataItems,
+    deleteDataItem,
   } = useFetch(
     [],
     "https://amirabasinasab.ir/nike/index.php/compare?id=",
@@ -31,8 +32,13 @@ const Compare = () => {
         <Error error={error} retry={getDataItems} />
       ) : products.length > 0 ? (
         <section className={classes.compare__products}>
-          {products.map((product) => (
-            <CompareProduct key={product.id} product={product} />
+          {products.map((product, index) => (
+            <CompareProduct
+              key={product.id}
+              product={product}
+              index={index}
+              deleteDataItem={deleteDataItem}
+            />
           ))}
         </section>
       ) : (
