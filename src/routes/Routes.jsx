@@ -15,6 +15,7 @@ import {
   Orders,
   Order,
   Profile,
+  Compare,
 } from "../config/routes";
 
 import Spinner from "../components/UI/spinner/Spinner";
@@ -31,6 +32,7 @@ const publicRoute = () => {
         <Route path="/category/:categoryName" element={<Products />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/compare" element={<Compare />} />
         <Route element={<PrivateRoute />}>
           <Route path="/panel" element={<Panel />}>
             <Route path="" element={<Dashboard />} />

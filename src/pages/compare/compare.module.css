@@ -1,0 +1,8 @@
+.compare{
+    min-height: inherit;
+}
+.compare__products{
+    display: flex;
+    gap: 30px;
+    overflow: auto;
+}
