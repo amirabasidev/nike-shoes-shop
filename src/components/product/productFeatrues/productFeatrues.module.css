@@ -2,6 +2,14 @@
     padding: 0 20px;
     margin-bottom: 30px;
 }
+.product__featrues_item_compare{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product__featrues_item_compare > * {
+    width: 100%!important;
+}
 .product__featrues_ul{
     display: flex;
     flex-direction: column;
