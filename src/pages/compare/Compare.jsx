@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
 import CompareEmpty from '../../components/compare/compareEmpty/CompareEmpty'
+import CompareProduct from '../../components/compare/compareProduct/CompareProduct'
 
 import classes from "./compare.module.css";
 
@@ -29,7 +30,11 @@ const Compare = () => {
       ) : error !== null ? (
         <Error error={error} retry={getDataItems} />
       ) : products.length > 0 ? (
-        <section className={classes.compare__products}>products</section>
+        <section className={classes.compare__products}>
+          {products.map((product) => (
+            <CompareProduct key={product.id} product={product} />
+          ))}
+        </section>
       ) : (
         <CompareEmpty />
       )}
