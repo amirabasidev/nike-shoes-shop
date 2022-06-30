@@ -15,6 +15,7 @@ import Tab from "../../components/UI/tabs/tab/Tab";
 import ProductAbout from "../../components/product/productAbout/ProductAbout";
 import ProductFeatrues from "../../components/product/productFeatrues/ProductFeatrues";
 import ProductComments from "../../components/product/productComments/ProductComments";
+import ProductActions from "../../components/product/productActions/ProductActions";
 
 import classes from "./product.module.css";
 
@@ -39,6 +40,7 @@ const Product = () => {
           <>
             <ProductBreadcrumb />
             <section className={classes.product__content}>
+            <ProductActions />
               <ProductImages />
               <ProductDetails />
             </section>
