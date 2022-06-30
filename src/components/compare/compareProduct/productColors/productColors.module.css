@@ -1,0 +1,20 @@
+.product__colors{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product__colors_items{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.product__colors_item{
+    width: 30px;
+    height: 30px;
+    border: var(--border-md);
+    border-radius: var(--border-radius-sm);
+    -webkit-border-radius: var(--border-radius-sm);
+    -moz-border-radius: var(--border-radius-sm);
+    -ms-border-radius: var(--border-radius-sm);
+    -o-border-radius: var(--border-radius-sm);
+}
