@@ -19,7 +19,7 @@ const productComments = () => {
     data: comments,
     error,
     loading,
-    fetchData: getComments,
+    getData: getComments,
   } = useFetch([], url);
 
   const [isReplay, setIsReplay] = useState(null);

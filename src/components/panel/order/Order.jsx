@@ -16,7 +16,7 @@ const Order = () => {
     data: order,
     loading,
     error,
-    fetchData: getOrder,
+    getData: getOrder,
   } = useFetch(
     null,
     `https://amirabasinasab.ir/nike/index.php/orders?id=${orderId}`,

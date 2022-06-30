@@ -15,7 +15,7 @@ const Orders = () => {
     data: orders,
     loading,
     error,
-    fetchData: getOrders,
+    getData: getOrders,
   } = useFetch(
     [],
     `https://amirabasinasab.ir/shop/index.php/orders?email='${user.email}'`,

@@ -19,7 +19,7 @@ const FilterCategory = () => {
     data: categories,
     loading,
     error,
-    fetchData: getCategories,
+    getData: getCategories,
   } = useFetch([], "https://amirabasinasab.ir/nike/index.php/categories");
 
   return (

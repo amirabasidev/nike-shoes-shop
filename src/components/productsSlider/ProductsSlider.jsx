@@ -24,7 +24,7 @@ const ProductsSlider = ({ title, url }) => {
     data: products,
     loading,
     error,
-    fetchData: getProducts,
+    getData: getProducts,
   } = useFetch([], url);
 
   return (
