@@ -3,6 +3,7 @@ import { CloseSquare, ArrowCircleRight } from "iconsax-react";
 
 import ProductSizes from "./productSizes/ProductSizes";
 import ProductColors from "./productColors/ProductColors";
+import ProductFeatrues from "../../product/productFeatrues/ProductFeatrues";
 
 import classes from "./compareProduct.module.css";
 
@@ -15,7 +16,7 @@ const CompareProduct = ({ product }) => {
       <h5 className={classes.compare__product_name}>{product.name}</h5>
       <ProductSizes sizes={product.sizes} />
       <ProductColors colors={product.colors}/>
-      {/* Product Featrues */}
+      <ProductFeatrues productFeatrues={product.features}/>
       <button className={`icon ${classes.compare__product_delete}`}>
         <CloseSquare size="100%" />
       </button>
