@@ -1,0 +1,21 @@
+.compare__empty{
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.compare__empty_icon{
+    width: 60px;
+    height: 60px;
+}
+.compare__empty_icon > svg > path{
+    stroke: var(--color-pink);
+}
+.compare__empty_text{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-xl);
+    color: var(--color-black);
+}

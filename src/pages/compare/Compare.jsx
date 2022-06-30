@@ -4,6 +4,7 @@ import useFetch from "../../hooks/useFetch";
 
 import Error from "../../components/error/Error";
 import Spinner from "../../components/UI/spinner/Spinner";
+import CompareEmpty from '../../components/compare/compareEmpty/CompareEmpty'
 
 import classes from "./compare.module.css";
 
@@ -30,7 +31,7 @@ const Compare = () => {
       ) : products.length > 0 ? (
         <section className={classes.compare__products}>products</section>
       ) : (
-        <p>Product Empty</p>
+        <CompareEmpty />
       )}
     </section>
   );
