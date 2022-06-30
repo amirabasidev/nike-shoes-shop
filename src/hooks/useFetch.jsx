@@ -4,6 +4,7 @@ const useFetch = (defaultValue, url, items) => {
   const FETCH_REQUEST = "FETCH_REQUEST";
   const FETCH_REQUEST_SUCCESS = "FETCH_USER_SUCCESS";
   const FETCH_REQUEST_FAIURE = "FETCH_USER_FAIURE";
+  const DELETE_DATA_ITEM = "DELETE_DATA_ITEM";
 
   const initialState = {
     data: defaultValue,
@@ -19,6 +20,11 @@ const useFetch = (defaultValue, url, items) => {
         return { ...state, data: action.payload, error: null, loading: false };
       case FETCH_REQUEST_FAIURE:
         return { ...state, error: action.payload, loading: false };
+      case DELETE_DATA_ITEM:
+        return {
+          ...state,
+          data: state.data.filter((item) => item.id !== action.payload),
+        };
       default:
         return state;
     }
@@ -62,6 +68,10 @@ const useFetch = (defaultValue, url, items) => {
       });
   };
 
+  const deleteDataItem = (id) => {
+    dispatch({ type: DELETE_DATA_ITEM, payload: id });
+  };
+
   useEffect(() => {
     if (items !== undefined && items.length > 0) {
       getDataItems();
@@ -70,7 +80,7 @@ const useFetch = (defaultValue, url, items) => {
     }
   }, [url]);
 
-  return { ...state, getData, getDataItems };
+  return { ...state, getData, getDataItems, deleteDataItem };
 };
 
 export default useFetch;
