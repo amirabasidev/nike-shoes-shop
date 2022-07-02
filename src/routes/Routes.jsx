@@ -1,5 +1,5 @@
-import { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Suspense, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 import {
   Home,
@@ -22,6 +22,12 @@ import {
 import Spinner from "../components/UI/spinner/Spinner";
 
 const publicRoute = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Suspense fallback={<Spinner minHeight="80vh" />}>
       <Routes>
