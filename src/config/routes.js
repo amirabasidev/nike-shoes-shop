@@ -14,3 +14,4 @@ export const Orders = lazy(() => import("../components/panel/orders/Orders"));
 export const Order = lazy(() => import("../components/panel/order/Order"));
 export const Profile = lazy(() => import("../components/panel/profile/Profile"));
 export const Compare = lazy(() => import("../pages/compare/Compare"));
+export const Contact = lazy(() => import("../pages/contact/Contact"));

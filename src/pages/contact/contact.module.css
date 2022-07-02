@@ -1,0 +1,32 @@
+.contact {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+.contact > * {
+  width: 48%;
+}
+.contact__details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact__title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-xxl);
+  color: var(--color-black);
+}
+.contact__description {
+  line-height: 30px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-lg);
+}
+.contact__maps{
+  height: 500px;
+  border-radius: var(--border-radius-sm);
+  -webkit-border-radius: var(--border-radius-sm);
+  -moz-border-radius: var(--border-radius-sm);
+  -ms-border-radius: var(--border-radius-sm);
+  -o-border-radius: var(--border-radius-sm);
+}
