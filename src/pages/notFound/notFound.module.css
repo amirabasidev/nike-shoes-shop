@@ -1,0 +1,16 @@
+.not__found{
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.not__found_img{
+    height: 300px;
+}
+.not__found_text{
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-xxl);
+    color: var(--color-pink);
+}
